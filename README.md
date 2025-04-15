@@ -1,1 +1,1 @@
-# download-snapshot
+# auto-apply-snapshot
