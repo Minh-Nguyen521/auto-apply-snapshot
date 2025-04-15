@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/auto-apply-snapshot/snapshot"
+	"github.com/auto-apply-snapshot/src/snapshot"
 )
 
 func main() {

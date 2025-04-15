@@ -7,7 +7,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/auto-apply-snapshot/snapshot"
+	"github.com/auto-apply-snapshot/src/snapshot"
 )
 
 // runService starts the automated snapshot service
