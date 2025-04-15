@@ -1,0 +1,5 @@
+# MongoDB connection URI
+mongodb_uri: "mongodb://username:password@localhost:27017/"
+
+# Backup directory (optional, defaults to 'backups')
+backup_dir: "backups" 
