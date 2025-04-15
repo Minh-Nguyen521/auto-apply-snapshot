@@ -2,17 +2,6 @@
 
 This program automatically creates and downloads snapshots of your MongoDB databases on a scheduled basis, with the ability to restore snapshots when needed. Written in Go for better performance and concurrency.
 
-## Features
-
-- Automated daily snapshots (configurable schedule)
-- Exports all databases and collections
-- Detailed logging
-- Error handling and retry mechanism
-- Configurable backup directory
-- Snapshot restoration capability
-- Command-line interface for easy management
-- Concurrent operations for better performance
-
 ## Setup
 
 1. Install Go 1.16 or later
