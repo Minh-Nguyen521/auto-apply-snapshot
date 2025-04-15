@@ -20,7 +20,7 @@ This program automatically creates and downloads snapshots of your MongoDB datab
 2. Clone the repository:
 ```bash
 git clone https://github.com/yourusername/auto-apply-snapshot.git
-cd auto-apply-snapshot
+cd auto-apply-snapshot/go
 ```
 
 3. Install dependencies:
@@ -43,7 +43,7 @@ cp config.yaml.example config.yaml
 
 Run the automated snapshot service:
 ```bash
-go run main.go -action service
+go run cmd/main.go -action service
 ```
 
 The service will:
@@ -57,17 +57,17 @@ Use the CLI to manage snapshots:
 
 1. List available snapshots:
 ```bash
-go run main.go -action list
+go run cmd/main.go -action list
 ```
 
 2. Create a snapshot manually:
 ```bash
-go run main.go -action create
+go run cmd/main.go -action create
 ```
 
 3. Restore a snapshot:
 ```bash
-go run main.go -action restore -snapshot YYYYMMDD_HHMMSS
+go run cmd/main.go -action restore -snapshot YYYYMMDD_HHMMSS
 ```
 
 ## Backup Structure
@@ -97,31 +97,10 @@ The program includes:
 
 To build the executable:
 ```bash
-go build -o mongodb-snapshot
+go build -o mongodb-snapshot cmd/main.go
 ```
 
 Then run it:
 ```bash
 ./mongodb-snapshot -action service
-```
-
-## Project Structure
-   .
-   ├── go/
-   │   ├── cmd/
-   │   │   ├── main.go
-   │   │   └── service.go
-   │   ├── src/
-   │   │   └── snapshot/
-   │   │       └── manager.go
-   │   ├── README.md
-   │   └── go.mod
-   ├── python/
-   │   ├── mongodb_cli.py
-   │   ├── mongodb_snapshot.py
-   │   ├── requirements.txt
-   │   ├── .env.example
-   │   └── README.md
-   ├── go.mod
-   ├── go.sum
-   └── README.md
+``` 

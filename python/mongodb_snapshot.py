@@ -2,7 +2,6 @@ import os
 import logging
 import schedule
 import time
-import json
 from datetime import datetime
 from pymongo import MongoClient
 from dotenv import load_dotenv
@@ -124,8 +123,8 @@ class MongoDBSnapshot:
             for db_name in databases:
                 db_path = os.path.join(snapshot_path, db_name)
                 logging.info(f"Restoring database: {db_name}")
-
-                # Get or create database
+                
+                # Create database backup directory
                 db = self.client[db_name]
 
                 # Get list of collection files
@@ -175,9 +174,6 @@ def main():
     schedule.every().day.at("02:00").do(snapshot_manager.create_snapshot)
     
     logging.info("MongoDB Snapshot Manager started")
-    
-    # Example of how to restore a snapshot
-    # snapshot_manager.restore_snapshot("20240415_020000")
     
     while True:
         try:
