@@ -93,24 +93,3 @@ Then run it:
 ```bash
 ./mongodb-snapshot -action service
 ```
-
-## Project Structure
-   .
-   ├── go/
-   │   ├── cmd/
-   │   │   ├── main.go
-   │   │   └── service.go
-   │   ├── src/
-   │   │   └── snapshot/
-   │   │       └── manager.go
-   │   ├── README.md
-   │   └── go.mod
-   ├── python/
-   │   ├── mongodb_cli.py
-   │   ├── mongodb_snapshot.py
-   │   ├── requirements.txt
-   │   ├── .env.example
-   │   └── README.md
-   ├── go.mod
-   ├── go.sum
-   └── README.md
