@@ -1,4 +1,4 @@
-# MongoDB Auto Snapshot (Go)
+# MongoDB Auto Snapshot (Go) (Python)
 
 This program automatically creates and downloads snapshots of your MongoDB databases on a scheduled basis, with the ability to restore snapshots when needed. Written in Go for better performance and concurrency.
 
